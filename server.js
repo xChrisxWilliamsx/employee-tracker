@@ -4,8 +4,8 @@ const { Pool } = require('pg');
 // Please update user and password
 const pool = new Pool(
     {
-      user: 'postgres',
-      password: 'Venaisperfect1!',
+      user: '',
+      password: '',
       host: 'localhost',
       database: 'emptrac'
     },
