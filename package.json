@@ -1,0 +1,17 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "employee-tracker",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.4",
+    "jest": "^29.7.0",
+    "pg": "^8.12.0"
+  }
+}

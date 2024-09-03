@@ -1,3 +1,4 @@
+-- Seeds departments table
 INSERT INTO departments (name) VALUES 
 ('Sales'),
 ('F&I'),
@@ -6,6 +7,7 @@ INSERT INTO departments (name) VALUES
 ('Human Resources'),
 ('Detail');
 
+-- Seeds roles table
 INSERT INTO roles (title, dep_id, salary_id) VALUES
 ('Sales Manager', 1, 1),
 ('Sales Associate', 1, 2),
@@ -23,6 +25,7 @@ INSERT INTO roles (title, dep_id, salary_id) VALUES
 ('Detail Manager', 6, 14),
 ('Detail tech', 6, 15);
 
+-- Seeds salaries table
 INSERT INTO salaries (amt, dep_id, role_id) VALUES
 (130000, 1, 1),
 (80000, 1, 2),
@@ -40,6 +43,7 @@ INSERT INTO salaries (amt, dep_id, role_id) VALUES
 (92000, 6, 14),
 (65000, 6, 15);
 
+-- Seeds managers table
 INSERT INTO managers (name, dep_id, role_id, salary_id) VALUES
 ('Alan Roman', 1, 1, 1),
 ('Jody Dodson', 2, 3, 3),
@@ -49,6 +53,7 @@ INSERT INTO managers (name, dep_id, role_id, salary_id) VALUES
 ('Morton Wolf', 5, 11, 11),
 ('Theodore Burns', 6, 14, 14);
 
+-- Seeds employees table
 INSERT INTO employees (first_name, last_name, dep_id, role_id, salary_id, manager_id) VALUES
 ('Maxine', 'Mayer', 1, 2, 2, 1),
 ('Florencio', 'Mcneil', 1, 2, 2, 1),

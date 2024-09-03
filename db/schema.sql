@@ -1,13 +1,18 @@
+-- Drops database if exists
 DROP DATABASE IF EXISTS emptrac;
+-- Creates emptrac database
 CREATE DATABASE emptrac;
 
+-- Connects to emptrac database
 \c emptrac;
 
+-- Creates departments table
 CREATE TABLE departments (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) UNIQUE NOT NULL
 );
 
+-- Creates roles table
 CREATE TABLE roles (
     id SERIAL PRIMARY KEY,
     title VARCHAR(50) UNIQUE NOT NULL,
@@ -17,6 +22,7 @@ CREATE TABLE roles (
     FOREIGN KEY (salary_id) REFERENCES salaries(id)
 );
 
+-- Creates salaries table
 CREATE TABLE salaries (
     id SERIAL PRIMARY KEY,
     amt DECIMAL NOT NULL,
@@ -26,6 +32,7 @@ CREATE TABLE salaries (
     FOREIGN KEY (role_id) REFERENCES roles(id)
 );
 
+-- Creates managers table
 CREATE TABLE managers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
@@ -37,6 +44,7 @@ CREATE TABLE managers (
     FOREIGN KEY (salary_id) REFERENCES salaries(id)
 );
 
+-- Creates employees table
 CREATE TABLE employees (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
