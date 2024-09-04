@@ -3,8 +3,8 @@ const viewOptions = require('./viewQuestions');
 
 const pool = new Pool(
     {
-        user: 'postgres',
-        password: 'Venaisperfect1!',
+        user: '',
+        password: '',
         host: 'localhost',
         database: 'emptrac'
     },
