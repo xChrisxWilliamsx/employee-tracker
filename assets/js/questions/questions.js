@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
-const viewOptions = require('./view/viewQuestions.js')
-const addOptions = require('./add/addQuestions.js')
-
+const viewOptions = require('./view/viewQuestions.js');
+const addOptions = require('./add/addQuestions.js');
+const updateOptions = require('./update/updateQuestions.js')
 
 const mainMenuOptions = (() => {
     const mainMenu = [
@@ -22,9 +22,6 @@ const mainMenuOptions = (() => {
     const selectedResponse = (() => {
         inquirer.prompt(mainMenu)
         .then((response) => {
-            // console.log("working");    
-            // console.log(response.mainMenu);
-
             switch (response.mainMenu) {
                 case "View":
                     // console.log("working - View");
@@ -39,14 +36,18 @@ const mainMenuOptions = (() => {
                     break;
         
                 case "Update":
-                    console.log("working - Update");
+                    // console.log("working - Update");
+                    console.clear();
+                    updateOptions();
                     break;
         
                 case "Delete":
-                    console.log("working - Delete");
+                    // console.log("working - Delete");
+                    process.exit();
                     break;
         
                 case "Quit":
+                    process.exit();
                     break;
             }
         })

@@ -4,8 +4,8 @@ const addOptions = require('./addQuestions');
 
 const pool = new Pool(
     {
-        user: '',
-        password: '',
+        user: 'postgres',
+        password: 'Venaisperfect1!',
         host: 'localhost',
         database: 'emptrac'
     },
