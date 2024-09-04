@@ -3,8 +3,8 @@ const mainMenuOptions = require('./assets/js/questions/questions');
 
 const pool = new Pool(
     {
-        user: 'postgres',
-        password: 'Venaisperfect1!',
+        user: '',
+        password: '',
         host: 'localhost',
         database: 'emptrac'
     },
