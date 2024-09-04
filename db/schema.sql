@@ -17,9 +17,9 @@ CREATE TABLE roles (
     id SERIAL PRIMARY KEY,
     title VARCHAR(50) UNIQUE NOT NULL,
     dep_id INTEGER,
-    salary_id INTEGER,
-    FOREIGN KEY (dep_id) REFERENCES departments(id),
-    FOREIGN KEY (salary_id) REFERENCES salaries(id)
+    salary_id INTEGER
+    -- FOREIGN KEY (dep_id) REFERENCES departments(id),
+    -- FOREIGN KEY (salary_id) REFERENCES salaries(id)
 );
 
 -- Creates salaries table
@@ -27,9 +27,9 @@ CREATE TABLE salaries (
     id SERIAL PRIMARY KEY,
     amt DECIMAL NOT NULL,
     dep_id INTEGER,
-    role_id INTEGER,
-    FOREIGN KEY (dep_id) REFERENCES departments(id),
-    FOREIGN KEY (role_id) REFERENCES roles(id)
+    role_id INTEGER
+    -- FOREIGN KEY (dep_id) REFERENCES departments(id),
+    -- FOREIGN KEY (role_id) REFERENCES roles(id)
 );
 
 -- Creates managers table
@@ -38,10 +38,10 @@ CREATE TABLE managers (
     name VARCHAR(100),
     dep_id INTEGER,
     role_id INTEGER,
-    salary_id INTEGER,
-    FOREIGN KEY (dep_id) REFERENCES departments(id),
-    FOREIGN KEY (role_id) REFERENCES roles(id),
-    FOREIGN KEY (salary_id) REFERENCES salaries(id)
+    salary_id INTEGER
+    -- FOREIGN KEY (dep_id) REFERENCES departments(id),
+    -- FOREIGN KEY (role_id) REFERENCES roles(id),
+    -- FOREIGN KEY (salary_id) REFERENCES salaries(id)
 );
 
 -- Creates employees table
@@ -52,9 +52,11 @@ CREATE TABLE employees (
     dep_id INTEGER NOT NULL,
     role_id INTEGER NOT NULL,
     salary_id INTEGER NOT NULL,
-    manager_id INTEGER,
-    FOREIGN KEY (dep_id) REFERENCES departments(id),
-    FOREIGN KEY (role_id) REFERENCES roles(id),
-    FOREIGN KEY (salary_id) REFERENCES salaries(id),
-    FOREIGN KEY (manager_id) REFERENCES managers(id)
+    salary_amt INTEGER NOT NULL,
+    manager_id INTEGER
+    -- FOREIGN KEY (dep_id) REFERENCES departments(id),
+    -- FOREIGN KEY (role_id) REFERENCES roles(id),
+    -- FOREIGN KEY (salary_id) REFERENCES salaries(id),
+    -- FOREIGN KEY (salary_amt) REFERENCES salaries(amt),
+    -- FOREIGN KEY (manager_id) REFERENCES managers(id)
 );

@@ -1,16 +1,13 @@
 const { Pool } = require('pg');
+const mainMenuOptions = require('./assets/js/questions/questions');
 
-// Connect to database
-// Please update user and password
 const pool = new Pool(
     {
-      user: '',
-      password: '',
-      host: 'localhost',
-      database: 'emptrac'
+        user: '',
+        password: '',
+        host: 'localhost',
+        database: 'emptrac'
     },
-    // run stage.index.js after connecting to db
-    console.log(`Connected to the emptrac database.`)
 );
 
 pool.connect();
