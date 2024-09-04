@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 const viewOptions = require('./view/viewQuestions.js')
+const addOptions = require('./add/addQuestions.js')
+
 
 const mainMenuOptions = (() => {
     const mainMenu = [
@@ -31,7 +33,9 @@ const mainMenuOptions = (() => {
                     break;
             
                 case "Add":
-                    console.log("working - Add");
+                    // console.log("working - Add");
+                    console.clear();
+                    addOptions();
                     break;
         
                 case "Update":
